@@ -1,0 +1,58 @@
+[
+  {
+    "id": "EzUGBKYydo",
+    "email": "emma@mercuresolutions.com",
+    "date": "2025-10-02T18:30:00.000Z",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-08T17:04:43.918Z"
+  },
+  {
+    "id": "gKrT3C-fSQ",
+    "email": "emma@mercuresolutions.com",
+    "date": "2025-10-03T18:30:00.000Z",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-08T17:05:16.109Z"
+  },
+  {
+    "id": "bGV42TXYRT",
+    "email": "sree@mercuresolotions.com",
+    "date": "2025-10-06",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-08T17:10:26.966Z"
+  },
+  {
+    "id": "zdReyzVvaT",
+    "email": "emma@mercuresolutions.com",
+    "date": "2025-10-06",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-08T17:49:52.106Z"
+  },
+  {
+    "id": "iXgl9LD0hS",
+    "email": "admin@erp.com",
+    "date": "2025-10-07",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-09T05:24:08.245Z"
+  },
+  {
+    "id": "UoO2VUTBI6",
+    "email": "admin@erp.com",
+    "date": "2025-10-06",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-09T05:23:55.531Z"
+  },
+  {
+    "id": "QE40jlgLlv",
+    "email": "admin@erp.com",
+    "date": "2025-10-04",
+    "status": "Present",
+    "hours": 9,
+    "updatedAt": "2025-10-09T05:27:12.930Z"
+  }
+]

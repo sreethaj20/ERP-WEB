@@ -1,0 +1,25 @@
+[
+  {
+    "id": "a2wxhJ8ftG",
+    "title": "Task Created",
+    "message": "Task created: ERP Update → nani@mercuresolutions.com",
+    "type": "success",
+    "link": "/admin/task-management",
+    "audience": "user:nani@mercuresolutions.com",
+    "createdAt": "2025-10-09T11:26:34.202Z",
+    "readBy": []
+  },
+  {
+    "id": "nQz6zRPsdV",
+    "title": "Task Updated",
+    "message": "ERP Update",
+    "type": "info",
+    "link": "/admin/task-management",
+    "audience": "user:nani@mercuresolutions.com",
+    "createdAt": "2025-10-09T11:26:34.152Z",
+    "readBy": []
+  }
+]:34.103Z",
+    "readBy": []
+  }
+]

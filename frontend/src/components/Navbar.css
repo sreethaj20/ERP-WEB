@@ -1,0 +1,578 @@
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Dark, high-contrast background to prevent logo blending */
+  background: linear-gradient(180deg, #8b8cf0 0%,#38BDF8 25% ) !important;
+  padding: 12px 24px; /* reduced height */
+  color: white;
+  position: sticky;   /* stays on top when scrolling */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.16);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  flex-wrap: wrap;
+  gap: 10px;
+  /* backdrop-filter: blur(12px); */
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Navbar Center Section */
+.navbar-center {
+  flex: 1;
+  min-width: 0; /* Allows text truncation to work */
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-greeting {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-login-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-dashboard-link {
+  white-space: nowrap;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  text-decoration: none;
+  color: white !important;
+  transition: background 0.2s;
+}
+
+.nav-dashboard-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+/* Navbar Links (Desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Links & Nav spans (Dashboard / Logout) */
+.nav-links li a,
+.nav-links li .nav-link {
+  color: white;
+  font-weight: 400; /* not bold */
+  font-size: 17px; /* slightly reduced to fit slimmer bar */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 10px 14px; /* reduce vertical padding */
+  border-radius: 6px;
+}
+
+.nav-links li a:hover,
+.nav-links li .nav-link:hover {
+  color: #cbd5e1; 
+}
+
+/* Remove old btn-outline from navbar */
+.nav-links .btn-outline {
+  display: none; 
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .nav-greeting {
+    max-width: 180px;
+  }
+  
+  .nav-login-info {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-greeting {
+    max-width: 150px;
+  }
+  
+  .nav-login-info {
+    display: none; /* Hide on smaller screens to save space */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .navbar-center {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0 0;
+    justify-content: center;
+  }
+  
+  .nav-greeting {
+    max-width: 150px;
+    font-size: 0.95em;
+  }
+  
+  .nav-login-info {
+    display: none;
+  }
+  
+  .nav-greeting {
+    max-width: 120px;
+    font-size: 0.9em;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #95a9ec;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    display: none;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-links li a,
+  .nav-links li .nav-link {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+}
+
+.attendance-progress {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.progress-circle {
+  position: relative;
+  display: inline-block;
+  flex: 1;
+  min-width: 100px;
+  max-width: 120px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-percentage {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.progress-label {
+  display: block;
+  font-size: 11px;
+  color: #7f8c8d;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .attendance-progress {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .progress-circle {
+    min-width: 80px;
+    max-width: 100px;
+  }
+  
+  .progress-percentage {
+    font-size: 14px;
+  }
+  
+  .progress-label {
+    font-size: 10px;
+  }
+}
+
+.notification-bell {
+  position: relative;
+}
+
+.notif-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Dropdown styling */
+.notif-dropdown {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 220px;
+  z-index: 1000;
+}
+
+.notif-dropdown p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+
+.notif-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+
+/* Navbar base layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px; /* reduced height */
+  background: #00246B !important;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* left / center / right columns */
+.navbar-left { flex: 0 0 auto; display:flex; align-items:center; }
+.navbar-center {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* start right after the logo */
+  gap: 16px; /* a bit more breathing room */
+  margin-left: clamp(20px, 4vw, 56px); /* move center content further right from logo */
+  min-width: 0; /* allow shrink so text can ellipsize instead of wrapping */
+  flex-wrap: nowrap;
+  overflow: hidden; /* hide marquee overflow so it scrolls under the edges */
+}
+.navbar-right { flex: 0 0 auto; display:flex; gap:14px; align-items:center; }
+
+/* Logo */
+.nav-logo { 
+  font-weight: 800; 
+  font-size: 32px; 
+  cursor: pointer; 
+  color: #ffffff; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-logo-img {
+  height: auto;
+  width: 180px; /* slightly reduced to trim navbar height */
+  max-height: 56px; /* reduce height to make navbar slimmer */
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.25));
+}
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+    width: 150px;
+    max-height: 56px;
+  }
+  /* reduce the left spacing on small screens */
+  .navbar-center {
+    margin-left: 8px;
+    gap: 10px;
+  }
+}
+
+/* center items */
+.nav-greeting { 
+  margin-right: 6px; 
+  font-size: 17px; 
+  color: #fff; 
+  font-weight: 400; 
+  white-space: nowrap; /* keep greeting in one line */
+}
+.nav-greeting strong { font-weight: 600; }
+
+.nav-login-info { 
+  color: rgba(255,255,255,0.92); 
+  font-size: 15px; 
+  margin-left: 6px; 
+  white-space: nowrap; /* prevent wrap of timestamp */
+  opacity: 0.95;
+}
+.nav-dashboard-link {
+  margin-left: 8px;
+  background: rgba(255,255,255,0.08);
+  padding: 6px 12px; /* compact for alignment */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
+}
+.nav-dashboard-link:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.22); }
+
+/* Scrolling marquee for login page center text */
+.nav-marquee {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+  width: 100%;
+  height: 22px; /* reduced height */
+  display: flex;
+  align-items: center;
+}
+
+.nav-marquee-inner {
+  display: inline-flex;
+  gap: 60px; /* reduced gap */
+  white-space: nowrap;
+  will-change: transform;
+  animation: navMarquee 12s linear infinite;
+  color: #fff;
+  opacity: 0.95;
+  font-size: 14px; /* smaller text */
+  padding-left: 40px;
+  padding-right: 40px;
+  width: max-content; /* allow inner to grow beyond container */
+}
+
+/* Variant used for one-time scroll */
+.nav-marquee-inner.once {
+  animation: navMarqueeOnce 12s linear 1 forwards;
+}
+
+.nav-marquee-inner span {
+  display: inline-block;
+  padding: 0 20px; /* add breathing space around each message to avoid edge clipping */
+}
+
+.nav-marquee-track {
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes navMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes navMarqueeOnce {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* right items */
+.notification-bell {
+  background: transparent;
+  border: none;
+  font-size: 16px; /* smaller icon */
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  padding: 4px 6px; /* tighter */
+  border-radius: 6px;
+}
+.notification-bell:hover { background: rgba(255,255,255,0.08); }
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff4d4f;
+  color: #fff;
+  padding: 1px 5px; /* smaller badge */
+  border-radius: 999px;
+  font-size: 10px;
+}
+
+/* small notification dropdown */
+.notification-dropdown {
+  position: absolute;
+  right: 6px;
+  margin-top: 8px;
+  width: 220px; /* narrower */
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.15);
+  padding: 8px; /* tighter */
+  z-index: 1200;
+}
+.notif-list { list-style:none; padding: 0; margin: 0; }
+.notif-list li { padding: 6px 4px; border-bottom: 1px solid #eee; font-size: 13px; }
+.notif-empty { padding: 10px; color: #666; }
+
+/* Public links (Login/Signup) styling */
+.public-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.public-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.public-links a:first-child {
+  /* Login button - outlined style */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+
+.public-links a:first-child:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.public-links a:last-child {
+  /* Signup button - filled style */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.public-links a:last-child:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* profile and logout */
+.nav-profile-link { 
+  color: #fff; 
+  text-decoration: none; 
+  padding: 6px 10px; 
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 10px; /* reduce button height */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.btn-logout:hover:not([disabled]) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-logout[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

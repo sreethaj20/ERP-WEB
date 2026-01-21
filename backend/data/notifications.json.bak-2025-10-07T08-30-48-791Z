@@ -1,0 +1,27 @@
+[
+  {
+    "id": "F4CCzvAB7j",
+    "title": "Task Created",
+    "message": "Task created: erg → emma@mercuresolutions.com",
+    "type": "success",
+    "link": "/admin/task-management",
+    "audience": "user:emma@mercuresolutions.com",
+    "createdAt": "2025-10-07T07:08:34.341Z",
+    "readBy": []
+  },
+  {
+    "id": "uQ1vspWPr0",
+    "title": "Task Updated",
+    "message": "erg",
+    "type": "info",
+    "link": "/admin/task-management",
+    "audience": "user:emma@mercuresolutions.com",
+    "createdAt": "2025-10-07T07:08:34.326Z",
+    "readBy": []
+  }
+]:34.305Z",
+    "readBy": [
+      "admin@erp.com"
+    ]
+  }
+]
